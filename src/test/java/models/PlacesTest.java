@@ -14,11 +14,21 @@ public class PlacesTest {
 
     @Test
     public void placesClassInstantiatesCorrectly_true() throws Exception{
-        Places places = new Places();
+        Places places = setNewPlace();
         assertEquals(true, places instanceof Places);
+    }
+
+    @Test
+    public void getPlaces_placesInstantiatesCorrectly_true() {
+        Places places = setNewPlace();
+        assertEquals("California", places.getPlace());
     }
 
     @After
     public void tearDown() throws Exception {
+    }
+
+    public static Places setNewPlace() {
+        return new Places("California");
     }
 }

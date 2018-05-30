@@ -1,6 +1,13 @@
 package models;
 
 public class Places {
-    public Places() {
+    private String place;
+
+    public Places(String place) {
+        this.place = place;
+    }
+
+    public String getPlace() {
+        return place;
     }
 }
